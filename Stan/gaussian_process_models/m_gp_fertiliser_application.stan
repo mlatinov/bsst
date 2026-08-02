@@ -48,7 +48,7 @@ transformed parameters {
    // Recover each unit's GP hyperparameters
    vector[N_soil_type] rho;
    vector[N_soil_type] alpha;
-   
+
    rho = exp(mean_rho + tau_rho * z_rho);
    alpha = exp(mean_alpha + tau_alpha * z_alpha);
 
@@ -57,8 +57,7 @@ transformed parameters {
 
    // Process every soil type separately.
    for(j in 1:N_soil_type){
-    
-   // Number of observations for this soil type
+    // Number of observations for this soil type
     int nj = soil_type_size[j];
 
     // Store fertilizer values for this soil only and raw values 
@@ -108,7 +107,7 @@ model{
     z_alpha    ~ std_normal();
 
     // Raw latent Gaussian vectors prior
-    to_vector(z) ~ std_normal();
+    z ~ std_normal();
 
     // Observational Model prior
     sd_obs ~ exponential(1);
