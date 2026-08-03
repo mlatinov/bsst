@@ -1,20 +1,24 @@
 Package: bsst
-Title: What the Package Does (One Line, Title Case)
-Version: 0.0.0.9000
+Title: Bayesian Simulation-Based Severe Testing
+Version: 0.1.0
 Authors@R: 
-    person("First", "Last", , "first.last@example.com", role = c("aut", "cre"))
-Description: What the package does (one paragraph).
-License: `use_mit_license()`, `use_gpl3_license()` or friends to pick a
-    license
+    person("Metodi", "Latinov", , "metodilatinov@abv.bg", role = c("aut", "cre"))
+Description: Provides tools for validating Bayesian models fitted with Stan
+    through simulation-based parameter recovery experiments. The package
+    automates the workflow of simulating data from known parameter values,
+    fitting a Bayesian model, evaluating parameter recovery, summarizing
+    convergence diagnostics, and exploring model performance across simulation
+    settings using designed experiments and Bayesian optimization.
+License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 8.0.0
 URL: https://github.com/mlatinov/bsst
 BugReports: https://github.com/mlatinov/bsst/issues
-Imports: 
+Imports:
     DiceKriging,
     lhs,
     rsims
-Suggests: 
+Suggests:
     testthat (>= 3.0.0)
 Config/testthat/edition: 3
